@@ -9,6 +9,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Infinity Dental Clinic",
+    "description": "Expert dental implants and smile makeover clinic in Vijay Nagar, Indore. Dr. Anmol Billore — MCI Verified Implantologist with 16+ years experience.",
+    "url": "https://dentalcheck.netlify.app",
+    "telephone": "+91-XXXXXXXXXX",
+    "email": "info@infinitydental.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34, Scheme No. 54, Vijay Nagar",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "postalCode": "452010",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "22.7533",
+      "longitude": "75.8937"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "13:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "17:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "10:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "200",
+      "bestRating": "5"
+    },
+    "medicalSpecialty": "Dentistry",
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "Dental Implants" },
+      { "@type": "MedicalProcedure", "name": "Smile Makeover" },
+      { "@type": "MedicalProcedure", "name": "Root Canal Treatment" },
+      { "@type": "MedicalProcedure", "name": "Teeth Whitening" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -24,11 +82,11 @@
           <div class="mci-badge" id="mci-badge">✅ MCI Verified Practitioner</div>
           <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;">
             <a href="contact.html#appointment" class="btn btn-primary" id="about-book-btn">Book Consultation</a>
-            <a href="https://wa.me/917987654321" target="_blank" rel="noopener" class="btn btn-whatsapp" id="about-wa-btn">💬 WhatsApp</a>
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-whatsapp" id="about-wa-btn">WhatsApp</a>
           </div>
         </div>
         <div class="doctor-img-wrap anim-fade-up anim-delay-2">
-          <img src="https://democmsdental.netlify.app/dr-billore.jpg"
+          <img src="/images/dr-billore.jpg"
                id="about-img"
                alt="Dr. Anmol Billore — Implantologist"
                width="440" height="540"
@@ -47,7 +105,24 @@
         <h2>Specializations</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" id="spec-grid">
-        <!-- Injected by cms-bridge.js -->
+        <ul class="specializations" style="grid-column: span 3; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0; padding: 0; list-style: none;">
+          <li class="spec-item card" style="padding:24px;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:10px;">🦷</div>
+            <p style="font-weight:600;color:var(--deep);font-size:0.92rem;">Dental Implantology</p>
+          </li>
+          <li class="spec-item card" style="padding:24px;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:10px;">✨</div>
+            <p style="font-weight:600;color:var(--deep);font-size:0.92rem;">Smile Design</p>
+          </li>
+          <li class="spec-item card" style="padding:24px;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:10px;">⚡</div>
+            <p style="font-weight:600;color:var(--deep);font-size:0.92rem;">Root Canal Treatment</p>
+          </li>
+          <li class="spec-item card" style="padding:24px;text-align:center;">
+            <div style="font-size:2rem;margin-bottom:10px;">🌟</div>
+            <p style="font-weight:600;color:var(--deep);font-size:0.92rem;">Laser Dentistry</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -61,7 +136,32 @@
       </div>
       <div style="display:flex;justify-content:center;">
         <div id="about-timeline">
-          <!-- Injected by cms-bridge.js -->
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <p class="year">2008</p>
+              <h4>BDS</h4>
+              <p>Premier Dental Institution</p>
+            </div>
+            <div class="timeline-item">
+               <div class="timeline-dot"></div>
+              <p class="year">2011</p>
+              <h4>Advanced Implantology Training</h4>
+              <p>Germany</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <p class="year">2012</p>
+              <h4>Founded Infinity Dental Clinic</h4>
+              <p>Vijay Nagar, Indore</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <p class="year">2016</p>
+              <h4>Member</h4>
+              <p>Indian Dental Association (IDA)</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -86,7 +186,18 @@
         <h2>Our Track Record</h2>
       </div>
       <div class="stats-grid" id="about-stats" style="max-width:700px;margin:0 auto;">
-        <!-- Injected by cms-bridge.js -->
+        <div class="stat-item">
+          <p class="stat-num">16+</p>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-num">500+</p>
+          <p>Happy Patients</p>
+        </div>
+        <div class="stat-item">
+          <p class="stat-num">10000+</p>
+          <p>Treatments</p>
+        </div>
       </div>
       <div class="text-center mt-48">
         <a href="contact.html#appointment" class="btn btn-primary" id="about-final-btn">Book Your Consultation Today</a>

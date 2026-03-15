@@ -1974,3 +1974,65 @@ img.img-fallback {
   .filter-tabs { gap: 6px; }
   .filter-tab { padding: 8px 14px; font-size: 0.82rem; }
 }
+
+/* Mobile Audit Fixes */
+@media (max-width: 480px) {
+  .cta-group, .cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cta-group a, .cta-group button,
+  .cta-actions a, .cta-actions button {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  
+  .hero-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.filter-tabs {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+}
+.skip-link:focus {
+  left: 16px;
+}
+
+/* WhatsApp Float Fix */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .whatsapp-float {
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

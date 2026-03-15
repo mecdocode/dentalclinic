@@ -11,36 +11,36 @@
       "id": "g2",
       "title": "Dental Implant",
       "category": "Implants",
-      "before": "images/gallery/before-implant-1.jpg",
-      "after": "images/gallery/after-implant-1.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     },
     {
       "id": "g3",
       "title": "Teeth Whitening",
       "category": "Whitening",
-      "before": "images/gallery/before-whitening-1.jpg",
-      "after": "images/gallery/after-whitening-1.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     },
     {
       "id": "g4",
       "title": "Clear Aligner Treatment",
       "category": "Braces",
-      "before": "images/gallery/before-braces-1.jpg",
-      "after": "images/gallery/after-braces-1.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     },
     {
       "id": "g5",
       "title": "Porcelain Veneers",
       "category": "Smile Makeover",
-      "before": "images/gallery/before-veneers-1.jpg",
-      "after": "images/gallery/after-veneers-1.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     },
     {
       "id": "g6",
       "title": "Implant-Supported Bridge",
       "category": "Implants",
-      "before": "images/gallery/before-implant-2.jpg",
-      "after": "images/gallery/after-implant-2.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     }
   ]
 }

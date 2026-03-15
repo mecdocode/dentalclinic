@@ -4,7 +4,7 @@
    ============================================================ */
 
 // ── Constants ────────────────────────────────────────────────
-const WA_LINK   = 'https://wa.me/917987654321';
+const WA_LINK   = 'https://wa.me/91XXXXXXXXXX';
 const WA_TEXT   = encodeURIComponent('Hello! I\'d like to book an appointment at Infinity Dental Clinic.');
 const BOOK_LINK = 'contact.html#appointment';
 
@@ -100,15 +100,31 @@ function buildFooter() {
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
+          
           <div>
-            <p class="footer-heading">Get In Touch</p>
-            <div class="footer-contact-item">
-              <span class="footer-contact-icon">📍</span>
-              <span>34, Scheme No. 54, Vijay Nagar, Indore</span>
+            <p class="footer-heading">Address</p>
+            <address style="font-style: normal; line-height: 1.6; margin-bottom: 16px;">
+              Infinity Dental Clinic<br>
+              34, Scheme No. 54, Vijay Nagar<br>
+              Indore, Madhya Pradesh — 452 010<br>
+              <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a><br>
+              <a href="https://maps.google.com/?q=..." target="_blank" rel="noopener">
+                View on Google Maps ↗
+              </a>
+            </address>
+            <div class="clinic-hours" style="margin-top: 20px;">
+              <p class="footer-heading">Clinic Hours</p>
+              <table style="width: 100%; font-size: 0.9em; line-height: 1.5;">
+                <tr><td>Monday – Saturday</td><td style="text-align: right;">9:00 AM – 1:00 PM</td></tr>
+                <tr><td>Monday – Saturday</td><td style="text-align: right;">5:00 PM – 9:00 PM</td></tr>
+                <tr><td>Sunday</td><td style="text-align: right;">10:00 AM – 1:00 PM</td></tr>
+              </table>
             </div>
+          </div>
+
             <div class="footer-contact-item">
               <span class="footer-contact-icon">📞</span>
-              <a href="tel:+917987654321" style="color:inherit">+91 79876 54321</a>
+              <a href="tel:+91XXXXXXXXXX" style="color:inherit">+91 XXXXXXXXXX</a>
             </div>
             <div class="footer-contact-item">
               <span class="footer-contact-icon">🕐</span>
@@ -121,7 +137,7 @@ function buildFooter() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© ${year} Infinity Dental Clinic. All rights reserved.</span>
+          <span>© ${year} Infinity Dental Clinic. All rights reserved. | <a href="privacy-policy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></span>
           <span>Dr. Anmol Billore — BDS, Implantologist · MCI Verified</span>
         </div>
       </div>
@@ -143,6 +159,7 @@ function injectLayout() {
     navPlaceholder.outerHTML = buildNav();
   } else {
     document.body.insertAdjacentHTML('afterbegin', buildNav());
+    document.body.insertAdjacentHTML('afterbegin', '<a href="#main-content" class="skip-link">Skip to main content</a>');
   }
 
   // Footer

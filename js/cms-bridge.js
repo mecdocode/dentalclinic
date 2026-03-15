@@ -242,7 +242,7 @@ async function loadServicesPage() {
   window.openDrawer = function(s) {
     if (drawer) {
       document.getElementById('drawer-icon').textContent  = s.icon;
-      document.getElementById('drawer-name').textContent  = s.name;
+      document.getElementById('drawer-name').textContent  = s.name || s.title;
       document.getElementById('drawer-cat').textContent   = s.category;
       document.getElementById('drawer-desc').textContent  = s.desc;
       drawer.classList.add('open');

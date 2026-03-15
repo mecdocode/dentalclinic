@@ -6,7 +6,7 @@
   "bio_short": "Dr. Anmol Billore is a highly experienced dental surgeon based in Indore with over 16 years of expertise in modern dentistry. Specialising in dental implantology and smile makeovers, he has successfully transformed the smiles of thousands of patients.",
   "bio_full": "Dr. Anmol Billore completed his BDS from one of India's premier dental institutions and subsequently pursued advanced training in implantology in Germany and South Korea. With a career spanning over 16 years, he has built a reputation for combining technical precision with an artistic understanding of facial aesthetics.\n\nHe is a member of multiple national and international dental associations and regularly participates in conferences and workshops to stay at the forefront of dental innovation.",
   "quote": "Every smile deserves the best care. My mission is to give you a confident, healthy smile that lasts a lifetime.",
-  "photo": "https://democmsdental.netlify.app/dr-billore.jpg",
+  "photo": "/images/dr-billore.jpg",
   "specializations": [
     { "icon": "🦷", "name": "Dental Implants" },
     { "icon": "✨", "name": "Smile Makeover" },
