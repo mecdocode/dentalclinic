@@ -697,7 +697,7 @@ p { color: var(--gray); }
 }
 
 .ba-images img {
-  width: 50%;
+  width: 100%;
   height: 260px;
   object-fit: cover;
 }

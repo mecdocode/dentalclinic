@@ -129,15 +129,15 @@ async function loadHomePage() {
           <div class="ba-images">
             <div style="position:relative;width:50%;">
               <span class="ba-label before">BEFORE</span>
-              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.label}" loading="lazy">
+              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.title || item.label || 'Case'}" loading="lazy">
             </div>
             <div style="position:relative;width:50%;">
               <span class="ba-label after">AFTER</span>
-              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.label}" loading="lazy">
+              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.title || item.label || 'Case'}" loading="lazy">
             </div>
           </div>
           <div class="ba-info">
-            <h4>${item.label}</h4>
+            <h4>${item.title || item.label}</h4>
             <p>${item.category}</p>
           </div>
         </div>
