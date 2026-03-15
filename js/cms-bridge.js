@@ -328,8 +328,29 @@ async function loadServicesPage() {
    PAGE: ABOUT (about.html)
    ============================================================ */
 async function loadAboutPage() {
-  const about = await fetchJSON('_data/about.json');
-  if (!about) return;
+  const about = {
+    doctor_name: "Dr. Anmol Billore",
+    degree: "BDS",
+    specialization: "Implantologist",
+    bio_full: "Dr. Anmol Billore is a highly experienced dental surgeon based in Indore with over 16 years of expertise in advanced implantology and aesthetic smile makeovers with painless treatment protocols framing flawlessly.",
+    quote: "Every smile has a story. Our mission is to make yours healthy, bright and beautiful.",
+    photo: "/images/dr-billore.jpg",
+    specializations: [
+      { name: "Implantology", icon: "🔬" },
+      { name: "Smile Design", icon: "✨" },
+      { name: "Cosmetic Dentistry", icon: "💎" },
+      { name: "Restorative", icon: "⚡" },
+      { name: "Laser Dentistry", icon: "🏥" },
+      { name: "Painless Extractions", icon: "🦷" }
+    ],
+    timeline: [
+      { year: "2010", label: "Graduated BDS", text: "Premier Dental Institution with core clinical excellence." },
+      { year: "2015", label: "Implantology Training", text: "Advanced Surgical Implantology, Germany setup bounds." },
+      { year: "2018", label: "IDA Membership", text: "Official member of Indian Dental Association framing." },
+      { year: "2020", label: "MCI Verification", text: "MCI Verified practitioner fully compliant procedures." }
+    ]
+  };
+  // disabled return
 
   setTextById('about-name',      about.doctor_name);
   setTextById('about-degree',    about.degree + ', ' + about.specialization);
