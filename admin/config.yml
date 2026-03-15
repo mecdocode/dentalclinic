@@ -90,6 +90,8 @@ collections:
     folder: _data/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: frontmatter
+    extension: md
     fields:
       - { label: Title,     name: title,     widget: string }
       - { label: Date,      name: date,      widget: datetime }
@@ -100,6 +102,22 @@ collections:
         hint: "Max 300KB · 800×450px (16:9) · JPG"
       - { label: Excerpt,   name: excerpt,   widget: text }
       - { label: Body,      name: body,      widget: markdown }
+
+  # ── Blog Index (Auto-updated by CMS) ───────────────────────
+  # A neat trick to make DecapCMS maintain a JSON list of all blog slugs.
+  - name: blog_index
+    label: "📂 Blog Indexing (Don't Edit)"
+    files:
+      - file: _data/blog.json
+        label: Blog URL Index
+        name: blog_index
+        fields:
+          - label: "Blog Slugs List"
+            name: slugs
+            widget: list
+            summary: '{{fields.slug}}'
+            fields:
+              - { label: Slug (filename without .md), name: slug, widget: string }
 
   # ── Doctor Info ────────────────────────────────────────────
   - name: about

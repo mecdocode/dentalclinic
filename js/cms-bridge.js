@@ -420,37 +420,51 @@ async function loadReviewsPage() {
 
 /* ============================================================
    PAGE: BLOG LIST (blog.html)
-   Static list from JSON manifest or hard-coded posts
    ============================================================ */
-const BLOG_POSTS = [
-  {
-    slug: '2025-03-10-dental-implant-signs',
-    title: '5 Signs You Need a Dental Implant (And Why to Act Fast)',
-    date: 'March 10, 2025',
-    tag: 'Implants',
-    thumbnail: 'images/blog/implant-guide.jpg',
-    excerpt: 'Missing teeth affect more than just your smile. Here are the top warning signs that a dental implant might be your best option.',
-  },
-  {
-    slug: '2025-02-18-whitening-guide',
-    title: 'Teeth Whitening: In-Office vs At-Home — What Works Best?',
-    date: 'February 18, 2025',
-    tag: 'Cosmetic',
-    thumbnail: 'images/blog/whitening-guide.jpg',
-    excerpt: 'We compare professional laser whitening with DIY kits so you can make the best choice for your smile.',
-  },
-  {
-    slug: '2025-01-05-implant-care-guide',
-    title: 'How to Care for Your Dental Implant: A Complete Guide',
-    date: 'January 5, 2025',
-    tag: 'Implants',
-    thumbnail: 'images/blog/implant-care.jpg',
-    excerpt: 'A dental implant can last a lifetime with proper care. Follow these expert tips from Dr. Anmol Billore.',
-  },
-];
+
+// Fetch all markdown files in _data/blog/
+async function fetchAllBlogPosts() {
+  const posts = [];
+  
+  // Hardcoded index of recent blog files for simplicity since we can't reliably read local directories from a static JS file without a build step or server endpoint in vanilla JS.
+  // When deploying to Netlify, this can be handled via a small build script or lambda function. For this static version, we check the known files.
+  // Let's add an auto-discovery approach: try fetching dates from this month backwards.
+  // A better, more robust way for static CMS setups is to use a collection list json file, but we will make an index file generator approach, or parse known items.
+  
+  // Since we are moving to production ready: to get around the limits of JS not being able to read folders natively:
+  // We'll provide a central blog.json index that Netlify DecapCMS can write to, OR since we don't have that yet, we use our existing sample ones and fetch them.
+  const knownSlugs = [
+    '2025-03-10-dental-implant-signs',
+    '2025-02-18-whitening-guide',
+    '2025-01-05-implant-care-guide'
+  ];
+
+  for (const slug of knownSlugs) {
+    const raw = await fetchText(`_data/blog/${slug}.md`);
+    if (raw) {
+      const { meta } = parseFrontmatter(raw);
+      posts.push({
+        slug: slug,
+        title: meta.title || 'Untitled',
+        date: meta.date || '',
+        tag: meta.tag || 'General',
+        thumbnail: meta.thumbnail || '',
+        excerpt: meta.excerpt || ''
+      });
+    }
+  }
+
+  // Sort by date descending
+  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+// Global cached posts
+let BLOG_POSTS = [];
 
 async function loadBlogPage() {
-  const posts = BLOG_POSTS;
+  const posts = await fetchAllBlogPosts();
+  BLOG_POSTS = posts; // Cache for other uses
+
 
   // Featured
   const featured = document.getElementById('featured-post');
@@ -498,12 +512,19 @@ async function loadBlogPage() {
    PAGE: BLOG POST (blog-post.html)
    ============================================================ */
 async function loadBlogPost() {
+  // Try to load index first to get related posts
+  if (BLOG_POSTS.length === 0) {
+    BLOG_POSTS = await fetchAllBlogPosts();
+  }
+
   const params = new URLSearchParams(window.location.search);
-  const slug   = params.get('slug') || BLOG_POSTS[0].slug;
+  const fallbackSlug = BLOG_POSTS.length > 0 ? BLOG_POSTS[0].slug : '2025-03-10-dental-implant-signs';
+  const slug = params.get('slug') || fallbackSlug;
 
   const raw = await fetchText(`_data/blog/${slug}.md`);
   if (!raw) {
-    document.getElementById('post-body').innerHTML = '<p>Post not found.</p>';
+    const postBody = document.getElementById('post-body');
+    if (postBody) postBody.innerHTML = '<p>Post not found. It may have been removed or renamed.</p>';
     return;
   }
 
