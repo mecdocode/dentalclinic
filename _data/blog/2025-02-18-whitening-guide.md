@@ -2,8 +2,9 @@
 title: "Teeth Whitening: In-Office vs At-Home — What Works Best?"
 date: 2025-02-18
 tag: Cosmetic
-thumbnail: images/blog/whitening-guide.jpg
-excerpt: Wondering which whitening option to choose? We compare professional laser whitening with DIY kits so you can make the best choice for your smile.
+thumbnail: /images/screen.png
+excerpt: Wondering which whitening option to choose? We compare professional
+  laser whitening with DIY kits so you can make the best choice for your smile.
 ---
 
 ## Why Do Teeth Stain?
