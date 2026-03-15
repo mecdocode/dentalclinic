@@ -1561,6 +1561,7 @@ p { color: var(--gray); }
   width: 100%;
   height: 100%;
   min-height: 360px;
+  object-fit: cover;
 }
 
 .featured-post-content {
@@ -1602,8 +1603,8 @@ p { color: var(--gray); }
   box-shadow: var(--shadow-md);
 }
 
-.blog-card-img { height: 200px; }
-.blog-card-img img { width: 100%; height: 100%; }
+.blog-card-img { height: 200px; overflow: hidden; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; }
 
 .blog-card-body {
   padding: 24px;

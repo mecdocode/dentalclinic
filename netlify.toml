@@ -9,4 +9,5 @@
   status = 200
 
 [build]
+  command = "node build-blog.js"
   publish = "."

@@ -422,40 +422,21 @@ async function loadReviewsPage() {
    PAGE: BLOG LIST (blog.html)
    ============================================================ */
 
-// Fetch all markdown files in _data/blog/
+// Fetch all blog posts from the auto-generated Netlify index
 async function fetchAllBlogPosts() {
-  const posts = [];
-  
-  // Hardcoded index of recent blog files for simplicity since we can't reliably read local directories from a static JS file without a build step or server endpoint in vanilla JS.
-  // When deploying to Netlify, this can be handled via a small build script or lambda function. For this static version, we check the known files.
-  // Let's add an auto-discovery approach: try fetching dates from this month backwards.
-  // A better, more robust way for static CMS setups is to use a collection list json file, but we will make an index file generator approach, or parse known items.
-  
-  // Since we are moving to production ready: to get around the limits of JS not being able to read folders natively:
-  // We'll provide a central blog.json index that Netlify DecapCMS can write to, OR since we don't have that yet, we use our existing sample ones and fetch them.
-  const knownSlugs = [
-    '2025-03-10-dental-implant-signs',
-    '2025-02-18-whitening-guide',
-    '2025-01-05-implant-care-guide'
-  ];
-
-  for (const slug of knownSlugs) {
-    const raw = await fetchText(`_data/blog/${slug}.md`);
-    if (raw) {
-      const { meta } = parseFrontmatter(raw);
-      posts.push({
-        slug: slug,
-        title: meta.title || 'Untitled',
-        date: meta.date || '',
-        tag: meta.tag || 'General',
-        thumbnail: meta.thumbnail || '',
-        excerpt: meta.excerpt || ''
-      });
-    }
+  try {
+    // This JSON file is created by build-blog.js when the site deploys
+    const response = await fetch('_data/blog_index.json');
+    if (!response.ok) return [];
+    
+    let posts = await response.json();
+    
+    // Sort by date descending just to be safe
+    return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+  } catch (err) {
+    console.error("Failed to fetch blog index:", err);
+    return [];
   }
-
-  // Sort by date descending
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 // Global cached posts
