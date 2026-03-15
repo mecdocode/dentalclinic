@@ -107,15 +107,34 @@ async function loadHomePage() {
   if (serviceItems.length) {
     const grid = document.getElementById('services-grid');
     if (grid) {
-      grid.innerHTML = serviceItems.slice(0, 8).map((s, i) => `
-        <div class="service-card anim-fade-up anim-delay-${(i % 4) + 1}"
-             data-category="${s.category}"
-             onclick="window.location.href='services.html'">
-          <div class="svc-icon">${s.icon}</div>
-          <p class="svc-name">${s.title || s.name}</p>
-          <p class="svc-desc">${s.short_desc}</p>
-        </div>
-      `).join('');
+      let shownServices = 6;
+      window.openDrawer = function(s) {
+        // defined inside list logic drawer setup trigger
+        // fallback to main services page if needed loads anchors borders
+      };
+      
+      function renderServices() {
+        grid.innerHTML = serviceItems.slice(0, shownServices).map((s, i) => `
+          <div class="service-card anim-fade-up anim-delay-${(i % 3) + 1}" style="cursor:pointer;"
+               data-category="${s.category}"
+               onclick="window.location.href='services.html'">
+            <div class="svc-icon">${s.icon}</div>
+            <p class="svc-name">${s.title || s.name}</p>
+            <p class="svc-desc">${s.short_desc}</p>
+          </div>
+        `).join('');
+
+        const viewMoreBtn = document.getElementById('all-services-btn');
+        if (viewMoreBtn) {
+          viewMoreBtn.textContent = shownServices >= serviceItems.length ? 'View Less' : 'View More Services';
+          viewMoreBtn.onclick = (e) => {
+            e.preventDefault();
+            shownServices = shownServices >= serviceItems.length ? 6 : shownServices + 6;
+            renderServices();
+          };
+        }
+      }
+      renderServices();
     }
   }
 
@@ -150,8 +169,8 @@ async function loadHomePage() {
   if (reviewItems.length) {
     const testiGrid = document.getElementById('home-testi-grid');
     if (testiGrid) {
-      testiGrid.innerHTML = reviewItems.slice(0, 3).map((r, i) => `
-        <div class="testi-card anim-fade-up anim-delay-${i + 1}">
+      testiGrid.innerHTML = reviewItems.slice(0, 8).map((r, i) => `
+        <div class="testi-card anim-fade-up anim-delay-${(i % 3) + 1}">
           <div class="stars">${renderStars(r.stars)}</div>
           <p class="testi-text">"${r.text}"</p>
           <div class="testi-author">
@@ -171,6 +190,30 @@ async function loadHomePage() {
 
   // Stat counters
   setupStatCounters(site);
+
+  // Load Blogs for Home Page
+  try {
+    const posts = await fetchAllBlogPosts();
+    const blogGrid = document.getElementById('home-blog-grid');
+    if (blogGrid && posts.length) {
+      blogGrid.innerHTML = posts.slice(0, 2).map((p) => `
+        <div class="blog-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+          <div style="aspect-ratio:16/9;overflow:hidden;background:var(--ice);">
+            <img src="${p.thumbnail}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;"
+                 onerror="this.style.background='var(--gradient)';this.src='';">
+          </div>
+          <div style="padding:20px;">
+            <span style="font-size:0.75rem;color:var(--sky);background:rgba(0,191,154,0.1);padding:4px 8px;border-radius:4px;">${p.tag}</span>
+            <p style="font-weight:500;margin:12px 0 8px;font-size:1.1rem;line-height:1.4;">${p.title}</p>
+            <p style="font-size:0.88rem;color:var(--gray);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:16px;">${p.excerpt}</p>
+            <a href="blog-post.html?slug=${p.slug}" style="font-weight:500;font-size:0.88rem;color:var(--deep);text-decoration:none;display:inline-flex;align-items:center;gap:4px;">Read More →</a>
+          </div>
+        </div>
+      `).join('');
+    }
+  } catch (err) {
+    console.error("Home blog load failed:", err);
+  }
 }
 
 function buildTicker(site) {
