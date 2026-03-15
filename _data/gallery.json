@@ -4,8 +4,8 @@
       "id": "g1",
       "title": "Full Smile Makeover",
       "category": "Smile Makeover",
-      "before": "images/gallery/before-smile-1.jpg",
-      "after": "images/gallery/after-smile-1.jpg"
+      "before": "/images/image2.jpeg",
+      "after": "/images/screen.png"
     },
     {
       "id": "g2",
