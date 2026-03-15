@@ -103,15 +103,16 @@ async function loadHomePage() {
   }
 
   // Services grid
-  if (services) {
+  const serviceItems = services?.items || services || [];
+  if (serviceItems.length) {
     const grid = document.getElementById('services-grid');
     if (grid) {
-      grid.innerHTML = services.slice(0, 8).map((s, i) => `
+      grid.innerHTML = serviceItems.slice(0, 8).map((s, i) => `
         <div class="service-card anim-fade-up anim-delay-${(i % 4) + 1}"
              data-category="${s.category}"
              onclick="window.location.href='services.html'">
           <div class="svc-icon">${s.icon}</div>
-          <p class="svc-name">${s.name}</p>
+          <p class="svc-name">${s.title || s.name}</p>
           <p class="svc-desc">${s.short_desc}</p>
         </div>
       `).join('');
@@ -119,10 +120,11 @@ async function loadHomePage() {
   }
 
   // Before & After Gallery (Homepage)
-  if (gallery) {
+  const galleryItems = gallery?.items || gallery || [];
+  if (galleryItems.length) {
     const baGrid = document.getElementById('home-ba-grid');
     if (baGrid) {
-      baGrid.innerHTML = gallery.slice(0, 2).map((item, i) => `
+      baGrid.innerHTML = galleryItems.slice(0, 2).map((item, i) => `
         <div class="ba-card anim-fade-up anim-delay-${i + 1}">
           <div class="ba-images">
             <div style="position:relative;width:50%;">
@@ -144,10 +146,11 @@ async function loadHomePage() {
   }
 
   // Testimonials (Homepage)
-  if (reviews) {
+  const reviewItems = reviews?.items || reviews || [];
+  if (reviewItems.length) {
     const testiGrid = document.getElementById('home-testi-grid');
     if (testiGrid) {
-      testiGrid.innerHTML = reviews.slice(0, 3).map((r, i) => `
+      testiGrid.innerHTML = reviewItems.slice(0, 3).map((r, i) => `
         <div class="testi-card anim-fade-up anim-delay-${i + 1}">
           <div class="stars">${renderStars(r.stars)}</div>
           <p class="testi-text">"${r.text}"</p>
@@ -219,11 +222,12 @@ async function loadServicesPage() {
 
   if (!grid) return;
 
-  grid.innerHTML = services.map(s => `
+  const serviceItems = services?.items || services || [];
+  grid.innerHTML = serviceItems.map(s => `
     <div class="service-full-card" data-category="${s.category}" data-id="${s.id}"
          onclick="openDrawer(${JSON.stringify(s).replace(/"/g, '&quot;')})">
       <div class="svc-full-icon">${s.icon}</div>
-      <p class="svc-full-name">${s.name}</p>
+      <p class="svc-full-name">${s.title || s.name}</p>
       <p class="svc-full-desc">${s.short_desc}</p>
       <span class="svc-view-btn">View Details →</span>
     </div>
@@ -322,9 +326,10 @@ async function loadGalleryPage() {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
 
+  const galleryItems = gallery.items || gallery;
   let lightboxItems = [];
 
-  grid.innerHTML = gallery.map((item, idx) => {
+  grid.innerHTML = galleryItems.map((item, idx) => {
     lightboxItems.push(item);
     return `
       <div class="gallery-item" data-category="${item.category}" onclick="openLightbox(${idx})">
@@ -339,12 +344,14 @@ async function loadGalleryPage() {
           </div>
         </div>
         <div class="gallery-caption">
-          <span>${item.label}</span>
+          <span>${item.title || item.label}</span>
           <span class="badge badge-sky" style="font-size:0.72rem;">${item.category}</span>
         </div>
       </div>
     `;
   }).join('');
+
+  window._galleryItems = galleryItems;
 
   if (window.InfinityDental) {
     window.InfinityDental.initFilterTabs('#gallery-filters', '.gallery-item');
@@ -389,8 +396,10 @@ async function loadGalleryPage() {
    PAGE: REVIEWS (reviews.html)
    ============================================================ */
 async function loadReviewsPage() {
-  const reviews = await fetchJSON('_data/reviews.json');
-  if (!reviews) return;
+  const data = await fetchJSON('_data/reviews.json');
+  if (!data) return;
+
+  const reviews = data.items || data;
 
   const grid = document.getElementById('reviews-grid');
   if (!grid) return;

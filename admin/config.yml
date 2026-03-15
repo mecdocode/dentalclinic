@@ -40,49 +40,78 @@ collections:
   # ── Services ───────────────────────────────────────────────
   - name: services
     label: "🦷 Services"
-    folder: _data/services
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Service Name,       name: title,      widget: string }
-      - { label: Icon (emoji),       name: icon,       widget: string, hint: "e.g. 🦷" }
-      - { label: Short Description,  name: short_desc, widget: text }
-      - { label: Full Description,   name: desc,       widget: markdown }
-      - label: Category
-        name: category
-        widget: select
-        options: [Implants, Cosmetic, Restorative, Preventive]
+    editor:
+      preview: false
+    files:
+      - file: _data/services.json
+        label: All Services
+        name: services
+        fields:
+          - label: Services List
+            name: items
+            widget: list
+            summary: '{{fields.icon}} {{fields.title}}'
+            min: 1
+            fields:
+              - { label: Service Name,       name: title,      widget: string }
+              - { label: Icon (emoji),       name: icon,       widget: string, hint: "e.g. 🦷" }
+              - { label: Short Description,  name: short_desc, widget: text }
+              - { label: Full Description,   name: desc,       widget: markdown }
+              - label: Category
+                name: category
+                widget: select
+                options: [Implants, Cosmetic, Restorative, Preventive]
 
   # ── Gallery ────────────────────────────────────────────────
   - name: gallery
     label: "📸 Gallery"
-    folder: _data/gallery
-    create: true
-    fields:
-      - { label: Case Label,  name: title,    widget: string }
-      - label: Category
-        name: category
-        widget: select
-        options: [Smile Makeover, Implants, Braces, Whitening]
-      - label: Before Image
-        name: before
-        widget: image
-        hint: "Max 600KB · 1200×800px · JPG landscape"
-      - label: After Image
-        name: after
-        widget: image
-        hint: "Max 600KB · 1200×800px · JPG landscape"
+    editor:
+      preview: false
+    files:
+      - file: _data/gallery.json
+        label: Before & After Cases
+        name: gallery
+        fields:
+          - label: Gallery Items
+            name: items
+            widget: list
+            summary: '{{fields.title}} - {{fields.category}}'
+            min: 1
+            fields:
+              - { label: Case Label,  name: title,    widget: string }
+              - label: Category
+                name: category
+                widget: select
+                options: [Smile Makeover, Implants, Braces, Whitening]
+              - label: Before Image
+                name: before
+                widget: image
+                hint: "Max 600KB · 1200×800px · JPG landscape"
+              - label: After Image
+                name: after
+                widget: image
+                hint: "Max 600KB · 1200×800px · JPG landscape"
 
   # ── Reviews ────────────────────────────────────────────────
   - name: reviews
     label: "⭐ Reviews"
-    folder: _data/reviews
-    create: true
-    fields:
-      - { label: Patient Name, name: name,  widget: string }
-      - { label: Stars (1–5),  name: stars, widget: number, min: 1, max: 5 }
-      - { label: Review Text,  name: text,  widget: text }
-      - { label: Date,         name: date,  widget: string, hint: "e.g. March 2025" }
+    editor:
+      preview: false
+    files:
+      - file: _data/reviews.json
+        label: Patient Reviews
+        name: reviews
+        fields:
+          - label: Review Items
+            name: items
+            widget: list
+            summary: '{{fields.stars}}★ - {{fields.name}}'
+            min: 1
+            fields:
+              - { label: Patient Name, name: name,  widget: string }
+              - { label: Stars (1–5),  name: stars, widget: number, min: 1, max: 5 }
+              - { label: Review Text,  name: text,  widget: text }
+              - { label: Date,         name: date,  widget: string, hint: "e.g. March 2025" }
 
   # ── Blog Posts ─────────────────────────────────────────────
   - name: blog

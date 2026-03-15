@@ -1,44 +1,46 @@
-[
-  {
-    "id": "g1",
-    "label": "Full Smile Makeover",
-    "category": "Smile Makeover",
-    "before": "images/gallery/before-smile-1.jpg",
-    "after": "images/gallery/after-smile-1.jpg"
-  },
-  {
-    "id": "g2",
-    "label": "Dental Implant",
-    "category": "Implants",
-    "before": "images/gallery/before-implant-1.jpg",
-    "after": "images/gallery/after-implant-1.jpg"
-  },
-  {
-    "id": "g3",
-    "label": "Teeth Whitening",
-    "category": "Whitening",
-    "before": "images/gallery/before-whitening-1.jpg",
-    "after": "images/gallery/after-whitening-1.jpg"
-  },
-  {
-    "id": "g4",
-    "label": "Clear Aligner Treatment",
-    "category": "Braces",
-    "before": "images/gallery/before-braces-1.jpg",
-    "after": "images/gallery/after-braces-1.jpg"
-  },
-  {
-    "id": "g5",
-    "label": "Porcelain Veneers",
-    "category": "Smile Makeover",
-    "before": "images/gallery/before-veneers-1.jpg",
-    "after": "images/gallery/after-veneers-1.jpg"
-  },
-  {
-    "id": "g6",
-    "label": "Implant-Supported Bridge",
-    "category": "Implants",
-    "before": "images/gallery/before-implant-2.jpg",
-    "after": "images/gallery/after-implant-2.jpg"
-  }
-]
+{
+  "items": [
+    {
+      "id": "g1",
+      "title": "Full Smile Makeover",
+      "category": "Smile Makeover",
+      "before": "images/gallery/before-smile-1.jpg",
+      "after": "images/gallery/after-smile-1.jpg"
+    },
+    {
+      "id": "g2",
+      "title": "Dental Implant",
+      "category": "Implants",
+      "before": "images/gallery/before-implant-1.jpg",
+      "after": "images/gallery/after-implant-1.jpg"
+    },
+    {
+      "id": "g3",
+      "title": "Teeth Whitening",
+      "category": "Whitening",
+      "before": "images/gallery/before-whitening-1.jpg",
+      "after": "images/gallery/after-whitening-1.jpg"
+    },
+    {
+      "id": "g4",
+      "title": "Clear Aligner Treatment",
+      "category": "Braces",
+      "before": "images/gallery/before-braces-1.jpg",
+      "after": "images/gallery/after-braces-1.jpg"
+    },
+    {
+      "id": "g5",
+      "title": "Porcelain Veneers",
+      "category": "Smile Makeover",
+      "before": "images/gallery/before-veneers-1.jpg",
+      "after": "images/gallery/after-veneers-1.jpg"
+    },
+    {
+      "id": "g6",
+      "title": "Implant-Supported Bridge",
+      "category": "Implants",
+      "before": "images/gallery/before-implant-2.jpg",
+      "after": "images/gallery/after-implant-2.jpg"
+    }
+  ]
+}

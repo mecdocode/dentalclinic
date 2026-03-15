@@ -1,56 +1,40 @@
-[
-  {
-    "name": "Priya Sharma",
-    "stars": 5,
-    "text": "Dr. Anmol is absolutely wonderful! I was terrified of the dentist, but his gentle approach and clear explanations put me completely at ease. My dental implant looks and feels completely natural. Best decision I ever made!",
-    "date": "February 2025"
-  },
-  {
-    "name": "Rahul Gupta",
-    "stars": 5,
-    "text": "Got my smile makeover done here and the results are beyond amazing. Dr. Billore has an eye for aesthetics that's rare. The clinic is extremely clean and modern. Very worth every rupee spent.",
-    "date": "January 2025"
-  },
-  {
-    "name": "Sneha Verma",
-    "stars": 5,
-    "text": "Had a root canal done in a single sitting — completely painless! I'd been putting it off for months out of fear. Dr. Anmol's team was so patient and kind. Highly recommend to anyone nervous about dental procedures.",
-    "date": "March 2025"
-  },
-  {
-    "name": "Amit Malhotra",
-    "stars": 5,
-    "text": "The clinic has state-of-the-art equipment and the doctor's skills are top-notch. Got my teeth whitened professionally and the difference is night and day. Very professional setup.",
-    "date": "December 2024"
-  },
-  {
-    "name": "Kavita Singh",
-    "stars": 5,
-    "text": "We brought our 8-year-old for pediatric dental care and were impressed at how comfortable they made the experience. No tantrums, no tears! The whole team is so warm and welcoming.",
-    "date": "February 2025"
-  },
-  {
-    "name": "Rohit Joshi",
-    "stars": 5,
-    "text": "Consulted for clear aligners and the results after 8 months are fantastic. Dr. Billore monitored every step carefully. The clinic uses modern digital scanning instead of messy moulds.",
-    "date": "January 2025"
-  },
-  {
-    "name": "Divya Patel",
-    "stars": 5,
-    "text": "I flew in from Pune specifically to see Dr. Anmol after seeing his work online. Got 8 veneers done and I genuinely can't stop smiling. The attention to detail is extraordinary. Worth every kilometre!",
-    "date": "March 2025"
-  },
-  {
-    "name": "Suresh Agarwal",
-    "stars": 5,
-    "text": "Excellent experience from start to finish. The staff is professional, the waiting time is minimal, and Dr. Billore takes time to explain every step of the treatment. 10/10 would recommend.",
-    "date": "November 2024"
-  },
-  {
-    "name": "Meena Rathi",
-    "stars": 5,
-    "text": "Had severe gum disease and was worried about losing my teeth. Dr. Anmol's laser gum treatment saved them! Regular check-ups now and my gums are completely healthy. Truly a life-changer.",
-    "date": "October 2024"
-  }
-]
+{
+  "items": [
+    {
+      "name": "Priya Sharma",
+      "stars": 5,
+      "text": "Dr. Anmol is absolutely wonderful! I was terrified of the dentist, but his gentle approach and clear explanations put me completely at ease. My dental implant looks and feels completely natural. Best decision I ever made!",
+      "date": "February 2025"
+    },
+    {
+      "name": "Rahul Gupta",
+      "stars": 5,
+      "text": "The consultation was thorough and professional. Dr. Anmol explained the entire procedure for my root canal in detail, and the treatment itself was surprisingly painless. The clinic is spotless and follow-up care was excellent.",
+      "date": "January 2025"
+    },
+    {
+      "name": "Sneha Rawat",
+      "stars": 5,
+      "text": "Professional, punctual, and very skilled. I went in for a complex extraction and crown. Everything went smoothly. I highly recommend Dr. Anmol for anyone looking for quality dental work in Indore.",
+      "date": "December 2024"
+    },
+    {
+      "name": "Amit Trivedi",
+      "stars": 5,
+      "text": "Infinity Dental Clinic is the best in Vijay Nagar. Had my smile makeover here and the results are amazing. Dr. Anmol really takes his time to get everything perfect. Worth every rupee!",
+      "date": "November 2024"
+    },
+    {
+      "name": "Kavita Singh",
+      "stars": 5,
+      "text": "Really impressed with the hygiene standards and the modern equipment. Dr. Anmol is soft-spoken and very patient. He explained things to me that other dentists never mentioned. 5 stars!",
+      "date": "October 2024"
+    },
+    {
+      "name": "Vikram Patel",
+      "stars": 4,
+      "text": "Excellent service and results for my whitening treatment. The only minor thing was a bit of a wait, but it was because the doctor was being so thorough with the previous patient. Highly recommended.",
+      "date": "September 2024"
+    }
+  ]
+}
