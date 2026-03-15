@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Infinity Dental Clinic Vijay Nagar, Indore</title>
+  <meta name="description" content="Contact Infinity Dental Clinic in Vijay Nagar, Indore. Book an appointment with Dr. Anmol Billore — +91 79876 54321. Open Mon–Sun 10AM–2PM & 5PM–9PM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Contact</span>
+      </div>
+      <h1>Book an Appointment</h1>
+      <p>We're open 7 days a week — reach us anytime via form, phone, or WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" style="background:var(--mist);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div id="appointment">
+          <div class="contact-form-wrap">
+            <span class="section-label" style="margin-bottom:16px;">Book Appointment</span>
+            <h2 style="margin-bottom:24px;">Get In Touch</h2>
+
+            <form id="contact-form" novalidate onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name *</label>
+                <input class="form-control" type="text" id="name" name="name"
+                       placeholder="Your full name" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input class="form-control" type="tel" id="phone" name="phone"
+                       placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="service">Service Required</label>
+                <select class="form-control" id="service" name="service">
+                  <option value="">Select a service…</option>
+                  <option>Dental Implants</option>
+                  <option>Smile Makeover</option>
+                  <option>Root Canal (RCT)</option>
+                  <option>Teeth Whitening</option>
+                  <option>Braces / Aligners</option>
+                  <option>Crowns &amp; Bridges</option>
+                  <option>Veneers</option>
+                  <option>Scaling &amp; Cleaning</option>
+                  <option>Consultation Only</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message / Questions</label>
+                <textarea class="form-control" id="message" name="message"
+                          placeholder="Tell us about your concerns or preferred appointment time…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="submit-btn">
+                📅 Send Appointment Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div>
+          <!-- Contact Info -->
+          <div class="card" style="padding:32px;margin-bottom:24px;">
+            <span class="section-label" style="margin-bottom:16px;">Clinic Info</span>
+
+            <div style="display:flex;flex-direction:column;gap:20px;">
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.4rem;flex-shrink:0;">📍</span>
+                <div>
+                  <p style="font-weight:600;color:var(--deep);margin-bottom:4px;">Address</p>
+                  <p id="contact-address">34, Scheme No. 54, Vijay Nagar, Indore</p>
+                  <a href="https://maps.google.com/?q=34,+Scheme+No.+54,+Vijay+Nagar,+Indore"
+                     target="_blank" rel="noopener"
+                     style="font-size:0.82rem;color:var(--sky);font-weight:600;margin-top:4px;display:inline-block;">
+                    Get Directions →
+                  </a>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.4rem;flex-shrink:0;">📞</span>
+                <div>
+                  <p style="font-weight:600;color:var(--deep);margin-bottom:4px;">Phone</p>
+                  <a href="tel:+917987654321" id="contact-phone-link"
+                     style="font-weight:600;color:var(--ink);font-size:1.05rem;">
+                    <span id="contact-phone">+91 79876 54321</span>
+                  </a>
+                </div>
+              </div>
+
+              <div style="display:flex;gap:14px;align-items:flex-start;">
+                <span style="font-size:1.4rem;flex-shrink:0;">🕐</span>
+                <div>
+                  <p style="font-weight:600;color:var(--deep);margin-bottom:4px;">Hours</p>
+                  <p id="contact-hours">10AM–2PM &amp; 5PM–9PM, Mon–Sun</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours Table -->
+            <div style="margin-top:24px;">
+              <table class="hours-table">
+                <thead>
+                  <tr><th>Day</th><th>Morning</th><th>Evening</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Monday – Sunday</td><td>10:00 AM – 2:00 PM</td><td>5:00 PM – 9:00 PM</td></tr>
+                  <tr><td colspan="3" style="color:var(--teal);font-size:0.82rem;font-weight:600;">✅ Open all 7 days including holidays</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- WhatsApp button -->
+          <a href="https://wa.me/917987654321" target="_blank" rel="noopener"
+             class="btn btn-whatsapp" id="contact-wa-btn"
+             style="width:100%;justify-content:center;font-size:1rem;padding:16px;margin-bottom:24px;">
+            💬 Chat Directly on WhatsApp
+          </a>
+
+          <!-- Map -->
+          <div class="map-embed" id="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29433.96041088!2d75.8627!3d22.7196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0b2e3f4141%3A0x8d0f9d4c498f3bf4!2sVijay%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              width="100%" height="260" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Infinity Dental Clinic Location">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/cms-bridge.js" defer></script>
+  <script defer>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name    = document.getElementById('name').value.trim();
+      const phone   = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !phone) {
+        if (window.InfinityDental) {
+          window.InfinityDental.showToast('Please fill in your name and phone number.', 'error');
+        }
+        return;
+      }
+
+      // Build WhatsApp message
+      const text = encodeURIComponent(
+        `Hi! I'd like to book an appointment at Infinity Dental Clinic.\n\n` +
+        `Name: ${name}\nPhone: ${phone}` +
+        (service ? `\nService: ${service}` : '') +
+        (message ? `\n\nMessage: ${message}` : '')
+      );
+
+      window.open(`https://wa.me/917987654321?text=${text}`, '_blank');
+
+      if (window.InfinityDental) {
+        window.InfinityDental.showToast('Redirecting to WhatsApp…', 'success');
+      }
+
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

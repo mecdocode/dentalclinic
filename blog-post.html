@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Blog Post | Infinity Dental Clinic</title>
+  <meta name="description" content="Dental health articles and expert advice from Dr. Anmol Billore, Infinity Dental Clinic, Indore.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Post Header -->
+  <header class="blog-post-header">
+    <div class="container">
+      <div class="breadcrumb" style="justify-content:center;margin-bottom:24px;">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <a href="blog.html">Blog</a>
+        <span>›</span>
+        <span id="post-tag">Article</span>
+      </div>
+      <h1 id="post-title">Loading Article…</h1>
+      <div class="blog-post-meta" style="margin-top:16px;">
+        <span>✍️ <span id="post-author">Dr. Anmol Billore</span></span>
+        <span>📅 <span id="post-date"></span></span>
+        <span>🏷️ <span id="post-tag-2"></span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Body -->
+  <main>
+    <article class="blog-post-body" id="post-body">
+      <!-- Injected by cms-bridge.js via marked.js -->
+      <p style="opacity:0.4;">Loading content…</p>
+    </article>
+
+    <!-- Share -->
+    <div class="container">
+      <div class="blog-share">
+        <p>📢 Share this article:</p>
+        <a id="share-wa" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size:0.85rem;padding:10px 18px;">
+          💬 Share on WhatsApp
+        </a>
+        <button class="btn btn-ghost" style="font-size:0.85rem;padding:10px 18px;" id="copy-link-btn"
+                onclick="navigator.clipboard.writeText(window.location.href).then(()=>window.InfinityDental&&window.InfinityDental.showToast('Link copied!','success'))">
+          🔗 Copy Link
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <div class="container">
+        <div class="text-center mb-32">
+          <span class="section-label">Keep Reading</span>
+          <h2>Related Articles</h2>
+        </div>
+        <div class="blog-grid" id="related-grid">
+          <!-- Injected by cms-bridge.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/cms-bridge.js" defer></script>
+  <script defer>
+    // Set WhatsApp share link after page loads
+    window.addEventListener('load', () => {
+      const wa = document.getElementById('share-wa');
+      if (wa) {
+        const text = encodeURIComponent(document.title + ' — ' + window.location.href);
+        wa.href = 'https://wa.me/?text=' + text;
+      }
+      // Mirror tag to second span
+      const tag = document.getElementById('post-tag');
+      const tag2 = document.getElementById('post-tag-2');
+      if (tag && tag2) tag2.textContent = tag.textContent;
+    });
+  </script>
+</body>
+</html>

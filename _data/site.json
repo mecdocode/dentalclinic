@@ -1,0 +1,22 @@
+{
+  "clinic_name": "Infinity Dental Clinic",
+  "doctor_name": "Dr. Anmol Billore",
+  "doctor_title": "BDS, Implantologist",
+  "doctor_photo": "https://democmsdental.netlify.app/dr-billore.jpg",
+  "phone": "+91 79876 54321",
+  "phone_raw": "917987654321",
+  "address": "34, Scheme No. 54, Vijay Nagar, Indore",
+  "hours": "10AM–2PM & 5PM–9PM, Mon–Sun",
+  "wa_link": "https://wa.me/917987654321",
+  "years_exp": "16+",
+  "patients": "500+",
+  "treatments": "10,000+",
+  "services_count": "25+",
+  "rating": "4.9",
+  "rating_count": "200+",
+  "mci": "MCI Verified",
+  "maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2453894!2d75.894444!3d22.713889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQyJzUwLjAiTiA3NcKwNTMnNDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890",
+  "doctor_bio": "Dr. Anmol Billore is a highly experienced dental surgeon based in Indore with over 16 years of expertise in the field of modern dentistry. Specialising in dental implantology and smile makeovers, he has successfully transformed the smiles and lives of thousands of patients.",
+  "doctor_quote": "Every smile deserves the best care. My mission is to give you a confident, healthy smile that lasts a lifetime.",
+  "map_url": "https://maps.google.com/?q=34,+Scheme+No.+54,+Vijay+Nagar,+Indore"
+}

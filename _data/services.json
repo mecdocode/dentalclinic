@@ -1,0 +1,98 @@
+[
+  {
+    "id": "implants",
+    "icon": "🦷",
+    "name": "Dental Implants & Grafting",
+    "short_desc": "Permanent, natural-looking tooth replacements.",
+    "desc": "State-of-the-art titanium dental implants that look, feel, and function like natural teeth. Includes bone grafting, sinus lift, and All-on-4 procedures for full arch restoration.",
+    "category": "Implants"
+  },
+  {
+    "id": "smile-makeover",
+    "icon": "✨",
+    "name": "Smile Makeover",
+    "short_desc": "Complete aesthetic transformation of your smile.",
+    "desc": "A comprehensive smile redesign combining teeth whitening, veneers, contouring, and bonding. Personalised to your facial features for a naturally radiant result.",
+    "category": "Cosmetic"
+  },
+  {
+    "id": "crowns",
+    "icon": "👑",
+    "name": "Crowns & Bridges",
+    "short_desc": "Durable restorations for damaged or missing teeth.",
+    "desc": "Metal-free ceramic crowns and bridges that restore full function and aesthetics. Custom-shade-matched for a seamless look. Completed in just 2 visits.",
+    "category": "Restorative"
+  },
+  {
+    "id": "rct",
+    "icon": "⚡",
+    "name": "Single Sitting RCT",
+    "short_desc": "Painless root canal treatment in one appointment.",
+    "desc": "Modern rotary endodontics with apex locators for precise, painless root canal treatment — often completed in a single sitting with minimal discomfort.",
+    "category": "Restorative"
+  },
+  {
+    "id": "whitening",
+    "icon": "🌟",
+    "name": "Teeth Whitening",
+    "short_desc": "Professional brightening up to 8 shades whiter.",
+    "desc": "Advanced in-office laser whitening and take-home custom tray kits. Safe, effective, and long-lasting. Results visible in as little as 45 minutes.",
+    "category": "Cosmetic"
+  },
+  {
+    "id": "braces",
+    "icon": "😁",
+    "name": "Braces & Clear Aligners",
+    "short_desc": "Straighten your teeth discreetly and comfortably.",
+    "desc": "Traditional metal braces, ceramic braces, and invisible clear aligners (like Invisalign). Bite correction and orthodontic treatment for all ages.",
+    "category": "Cosmetic"
+  },
+  {
+    "id": "veneers",
+    "icon": "💎",
+    "name": "Porcelain Veneers",
+    "short_desc": "Ultra-thin shells for a flawless smile.",
+    "desc": "E-max and feldspathic porcelain veneers crafted to conceal chips, stains, gaps, and discolouration. Minimally invasive with dramatic aesthetic results.",
+    "category": "Cosmetic"
+  },
+  {
+    "id": "cleaning",
+    "icon": "🔬",
+    "name": "Scaling & Deep Cleaning",
+    "short_desc": "Remove plaque and protect your gum health.",
+    "desc": "Professional ultrasonic scaling and root planing to eliminate tartar, control gum disease, and maintain a healthy oral environment. Recommended every 6 months.",
+    "category": "Preventive"
+  },
+  {
+    "id": "extraction",
+    "icon": "🩺",
+    "name": "Wisdom Tooth Extraction",
+    "short_desc": "Painless surgical and simple tooth extractions.",
+    "desc": "Painless surgical extractions of impacted wisdom teeth under local or IV sedation. Post-operative care and follow-up included for smooth recovery.",
+    "category": "Restorative"
+  },
+  {
+    "id": "kids",
+    "icon": "🧒",
+    "name": "Paediatric Dentistry",
+    "short_desc": "Gentle dental care for your little ones.",
+    "desc": "Child-friendly dental check-ups, fluoride treatment, pit-and-fissure sealants, and habit corrections. Creating positive dental experiences from a young age.",
+    "category": "Preventive"
+  },
+  {
+    "id": "gum",
+    "icon": "💪",
+    "name": "Gum Treatment",
+    "short_desc": "Advanced periodontal care for healthier gums.",
+    "desc": "Comprehensive treatment for gingivitis and periodontitis including laser gum therapy, gum contouring, and regenerative procedures.",
+    "category": "Preventive"
+  },
+  {
+    "id": "dentures",
+    "icon": "🏥",
+    "name": "Dentures & Partials",
+    "short_desc": "Removable prosthetics for missing teeth.",
+    "desc": "Complete and partial removable dentures crafted for comfort and aesthetics. Implant-supported dentures also available for superior retention.",
+    "category": "Restorative"
+  }
+]

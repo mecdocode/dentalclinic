@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: /images
+
+collections:
+
+  # ── Site Info ──────────────────────────────────────────────
+  - name: site
+    label: "⚙️ Site Info"
+    files:
+      - file: _data/site.json
+        label: Site Settings
+        name: site
+        fields:
+          - { label: Clinic Name,        name: clinic_name,    widget: string }
+          - { label: Doctor Name,        name: doctor_name,    widget: string }
+          - { label: Doctor Title,       name: doctor_title,   widget: string }
+          - label: Doctor Photo
+            name: doctor_photo
+            widget: image
+            hint: "Max 500KB · 800×1000px · Portrait JPG"
+          - { label: Phone,              name: phone,          widget: string }
+          - { label: Phone (raw digits), name: phone_raw,      widget: string, hint: "No + prefix, no spaces e.g. 917987654321" }
+          - { label: Address,            name: address,        widget: string }
+          - { label: Hours,              name: hours,          widget: string }
+          - { label: Years Experience,   name: years_exp,      widget: string }
+          - { label: Happy Patients,     name: patients,       widget: string }
+          - { label: Treatments Done,    name: treatments,     widget: string }
+          - { label: No. of Services,    name: services_count, widget: string }
+          - { label: Google Rating,      name: rating,         widget: string }
+          - { label: Rating Count,       name: rating_count,   widget: string }
+          - { label: MCI Badge Text,     name: mci,            widget: string }
+          - { label: WhatsApp Link,      name: wa_link,        widget: string }
+          - { label: Doctor Bio,         name: doctor_bio,     widget: text }
+          - { label: Doctor Quote,       name: doctor_quote,   widget: text }
+
+  # ── Services ───────────────────────────────────────────────
+  - name: services
+    label: "🦷 Services"
+    folder: _data/services
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Service Name,       name: title,      widget: string }
+      - { label: Icon (emoji),       name: icon,       widget: string, hint: "e.g. 🦷" }
+      - { label: Short Description,  name: short_desc, widget: text }
+      - { label: Full Description,   name: desc,       widget: markdown }
+      - label: Category
+        name: category
+        widget: select
+        options: [Implants, Cosmetic, Restorative, Preventive]
+
+  # ── Gallery ────────────────────────────────────────────────
+  - name: gallery
+    label: "📸 Gallery"
+    folder: _data/gallery
+    create: true
+    fields:
+      - { label: Case Label,  name: title,    widget: string }
+      - label: Category
+        name: category
+        widget: select
+        options: [Smile Makeover, Implants, Braces, Whitening]
+      - label: Before Image
+        name: before
+        widget: image
+        hint: "Max 600KB · 1200×800px · JPG landscape"
+      - label: After Image
+        name: after
+        widget: image
+        hint: "Max 600KB · 1200×800px · JPG landscape"
+
+  # ── Reviews ────────────────────────────────────────────────
+  - name: reviews
+    label: "⭐ Reviews"
+    folder: _data/reviews
+    create: true
+    fields:
+      - { label: Patient Name, name: name,  widget: string }
+      - { label: Stars (1–5),  name: stars, widget: number, min: 1, max: 5 }
+      - { label: Review Text,  name: text,  widget: text }
+      - { label: Date,         name: date,  widget: string, hint: "e.g. March 2025" }
+
+  # ── Blog Posts ─────────────────────────────────────────────
+  - name: blog
+    label: "✍️ Blog Posts"
+    folder: _data/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title,     name: title,     widget: string }
+      - { label: Date,      name: date,      widget: datetime }
+      - { label: Tag,       name: tag,       widget: string, default: "General" }
+      - label: Thumbnail
+        name: thumbnail
+        widget: image
+        hint: "Max 300KB · 800×450px (16:9) · JPG"
+      - { label: Excerpt,   name: excerpt,   widget: text }
+      - { label: Body,      name: body,      widget: markdown }
+
+  # ── Doctor Info ────────────────────────────────────────────
+  - name: about
+    label: "👨‍⚕️ Doctor Info"
+    files:
+      - file: _data/about.json
+        label: Doctor Bio & Career
+        name: about
+        fields:
+          - { label: Doctor Name,       name: doctor_name,    widget: string }
+          - { label: Degree,            name: degree,         widget: string }
+          - { label: Specialization,    name: specialization, widget: string }
+          - label: Doctor Photo
+            name: photo
+            widget: image
+            hint: "Max 500KB · 800×1000px"
+          - { label: Short Bio,         name: bio_short,      widget: text }
+          - { label: Full Bio,          name: bio_full,       widget: markdown }
+          - { label: Pull Quote,        name: quote,          widget: text }
