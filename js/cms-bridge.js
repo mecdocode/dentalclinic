@@ -36,6 +36,16 @@ async function fetchText(path) {
   }
 }
 
+// ── Netlify Image CDN Optimizer ──────────────────────────────
+function optimizeImage(src, width, height) {
+  if (!src) return '/images/placeholder.jpg';
+  // Check if it's an external absolute URL. If so, don't break it, just return it.
+  if (src.startsWith('http')) return src;
+  
+  // Netlify transforms on the fly
+  return `/.netlify/images?url=${encodeURIComponent(src)}&w=${width}&h=${height}&fit=cover&fm=webp`;
+}
+
 // ── Frontmatter parser ────────────────────────────────────────
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -59,7 +69,7 @@ function renderStars(n) {
 
 // ── Image fallback ────────────────────────────────────────────
 function imgSrc(src, fallbackText = '🦷') {
-  return `<img src="${src}" alt="${fallbackText}" loading="lazy"
+  return `<img src="${optimizeImage(src, 800, 600)}" alt="${fallbackText}" loading="lazy"
           onerror="this.style.background='var(--ice)';this.src='';this.style.minHeight='200px';">`;
 }
 
@@ -88,7 +98,7 @@ async function loadHomePage() {
 
   const doctorImg = document.getElementById('doctor-img');
   if (doctorImg) {
-    doctorImg.src = site.doctor_photo;
+    doctorImg.src = optimizeImage(site.doctor_photo, 800, 1000);
     doctorImg.alt = site.doctor_name;
   }
 
@@ -117,11 +127,11 @@ async function loadHomePage() {
           <div class="ba-images">
             <div style="position:relative;width:50%;">
               <span class="ba-label before">BEFORE</span>
-              ${imgSrc(item.before, 'Before ' + item.label)}
+              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.label}" loading="lazy">
             </div>
             <div style="position:relative;width:50%;">
               <span class="ba-label after">AFTER</span>
-              ${imgSrc(item.after, 'After ' + item.label)}
+              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.label}" loading="lazy">
             </div>
           </div>
           <div class="ba-info">
@@ -453,7 +463,7 @@ async function loadBlogPage() {
     const p = posts[0];
     featured.innerHTML = `
       <div class="featured-post-img">
-        <img src="${p.thumbnail}" alt="${p.title}" style="width:100%;height:100%;min-height:320px;"
+        <img src="${optimizeImage(p.thumbnail, 800, 450)}" alt="${p.title}" style="width:100%;height:100%;min-height:320px;"
              onerror="this.style.background='var(--gradient)';this.src='';">
       </div>
       <div class="featured-post-content">
@@ -472,7 +482,7 @@ async function loadBlogPage() {
     grid.innerHTML = posts.slice(1).map(p => `
       <div class="blog-card">
         <div class="blog-card-img">
-          <img src="${p.thumbnail}" alt="${p.title}"
+          <img src="${optimizeImage(p.thumbnail, 600, 338)}" alt="${p.title}"
                onerror="this.style.background='var(--gradient)';this.src='';">
         </div>
         <div class="blog-card-body">

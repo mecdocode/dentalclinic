@@ -7,6 +7,54 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // ── Admin-side Image Validation ───────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      // Small toast notification helper
+      function showToast(msg) {
+        const toast = document.createElement('div');
+        toast.style.cssText = `
+          position: fixed; bottom: 20px; right: 20px; background: #ef4444; color: white;
+          padding: 12px 20px; border-radius: 8px; font-family: sans-serif; font-size: 14px;
+          box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); z-index: 9999;
+          transform: translateY(100%); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;
+        `;
+        toast.innerText = msg;
+        document.body.appendChild(toast);
+        
+        // Animate in
+        setTimeout(() => { toast.style.transform = 'translateY(0)'; toast.style.opacity = '1'; }, 100);
+        
+        // Remove after 5s
+        setTimeout(() => {
+          toast.style.transform = 'translateY(100%)'; toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+        }, 5000);
+      }
+
+      // Listen for file drops/selects anywhere in the DOM (DecapCMS creates UI dynamically)
+      document.body.addEventListener('change', (e) => {
+        if (e.target.type !== 'file') return;
+        
+        const file = e.target.files[0];
+        if (!file || !file.type.startsWith('image/')) return;
+
+        // Check file size (Warn if > 600KB)
+        const sizeKB = Math.round(file.size / 1024);
+        if (sizeKB > 600) {
+          showToast(`⚠️ WARNING: Image is ${sizeKB}KB! Large images slow down the site. Recommended max is 600KB. Try squoosh.app`);
+        }
+
+        // Check dimensions to warn if image is extremely small/pixelated
+        const img = new Image();
+        img.onload = () => {
+          if (img.width < 600 || img.height < 400) {
+            showToast(`⚠️ WARNING: Image is only ${img.width}×${img.height}px. It may look blurry or pixelated on the website.`);
+          }
+        };
+        img.src = URL.createObjectURL(file);
+      }, true); // Use capture phase because DecapCMS stops propagation
+    });
+  </script>
 </body>
 </html>
