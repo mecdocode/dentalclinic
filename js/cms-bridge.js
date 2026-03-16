@@ -175,13 +175,13 @@ async function loadHomePage() {
   }
 
   // Before & After Gallery (Homepage)
-  const galleryItems = gallery?.items || gallery || [];
+  const galleryItems = STATIC_GALLERY; // Use static mockups
   if (galleryItems.length) {
     const baGrid = document.getElementById('home-ba-grid');
     if (baGrid) {
       baGrid.innerHTML = galleryItems.slice(0, 2).map((item, i) => `
         <div class="ba-card anim-fade-up anim-delay-${i + 1}" style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md);">
-          <img-comparison-slider>
+          <img-comparison-slider style="width:100%;height:300px;display:block;">
             <figure slot="first">
               <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
             </figure>
@@ -406,7 +406,7 @@ async function loadGalleryPage() {
   function renderGallery(items) {
     grid.innerHTML = items.map(item => `
       <div class="gallery-card" data-category="${item.category}">
-        <img-comparison-slider>
+        <img-comparison-slider style="width:100%;height:300px;display:block;">
           <figure slot="first">
             <img src="${item.before}" alt="Before ${item.title}" loading="lazy">
           </figure>
