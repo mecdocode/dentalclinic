@@ -29,12 +29,9 @@ for(let i=9; i<=25; i++) {
 }
 
 const STATIC_GALLERY = [
-  { title: "Smile Makeover", category: "Cosmetic", before: "/images/image2.jpeg", after: "/images/screen.png" },
-  { title: "Dental Implants", category: "Implants", before: "/images/image2.jpeg", after: "/images/screen.png" },
-  { title: "Invisible Aligners", category: "Cosmetic", before: "/images/image2.jpeg", after: "/images/screen.png" },
-  { title: "Teeth Whitening", category: "Cosmetic", before: "/images/image2.jpeg", after: "/images/screen.png" },
-  { title: "Composite Bonding", category: "Cosmetic", before: "/images/image2.jpeg", after: "/images/screen.png" },
-  { title: "Overdenture Support", category: "Implants", before: "/images/image2.jpeg", after: "/images/screen.png" }
+  { title: "Smile Makeover", category: "Cosmetic", before: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" },
+  { title: "Dental Implants", category: "Implants", before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80" },
+  { title: "Invisible Aligners", category: "Cosmetic", before: "https://images.unsplash.com/photo-1588776814546-1ffb4b1a546d?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1513222755437-00995fa6657a?auto=format&fit=crop&w=600&q=80" }
 ];
 
 /* ============================================================
