@@ -183,20 +183,18 @@ async function loadHomePage() {
     const baGrid = document.getElementById('home-ba-grid');
     if (baGrid) {
       baGrid.innerHTML = galleryItems.slice(0, 2).map((item, i) => `
-        <div class="ba-card anim-fade-up anim-delay-${i + 1}">
-          <div class="ba-images">
-            <div style="position:relative;width:50%;">
-              <span class="ba-label before">BEFORE</span>
-              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.title || item.label || 'Case'}" loading="lazy">
-            </div>
-            <div style="position:relative;width:50%;">
-              <span class="ba-label after">AFTER</span>
-              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.title || item.label || 'Case'}" loading="lazy">
-            </div>
-          </div>
-          <div class="ba-info">
-            <h4>${item.title || item.label}</h4>
-            <p>${item.category}</p>
+        <div class="ba-card anim-fade-up anim-delay-${i + 1}" style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md);">
+          <img-comparison-slider>
+            <figure slot="first">
+              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
+            </figure>
+            <figure slot="second">
+              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
+            </figure>
+          </img-comparison-slider>
+          <div class="ba-info" style="padding:16px;text-align:center;">
+            <h4 style="font-size:1.1rem;font-weight:600;color:var(--clr-primary);margin-bottom:4px;">${item.title}</h4>
+            <p style="font-size:0.85rem;color:var(--gray);">${item.category}</p>
           </div>
         </div>
       `).join('');
