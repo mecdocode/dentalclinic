@@ -411,7 +411,7 @@ async function loadGalleryPage() {
   function renderGallery(items) {
     grid.innerHTML = items.map(item => `
       <div class="gallery-card" data-category="${item.category}">
-        <img-comparison-slider hover="hover">
+        <img-comparison-slider>
           <figure slot="first">
             <img src="${item.before}" alt="Before ${item.title}" loading="lazy">
           </figure>
