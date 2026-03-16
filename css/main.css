@@ -2251,3 +2251,15 @@ img-comparison-slider {
   }
   .service-full-card { padding: 16px !important; }
 }
+
+/* Force Slider image dimensions preventing ugly breaks */
+img-comparison-slider img {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+img-comparison-slider {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
