@@ -2,22 +2,23 @@
 /* ============================================================
    ROOT CAUSE FIX: LOCAL STATIC DATA (No silent fetch failures)
    ============================================================ */
+
 const STATIC_SERVICES = [
   {
     "id": "s1",
     "title": "Crowns and Bridges Fixing",
-    "category": "General",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Crowns and Bridges Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Expert placement of high-quality crowns and bridges to restore damaged or missing teeth with natural-looking results and superior durability."
   },
   {
     "id": "s2",
     "title": "Artificial Teeth",
-    "category": "Implants",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Artificial Teeth is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Personalized artificial tooth solutions including high-grade dentures and partials designed for comfort, function, and a natural aesthetic."
   },
   {
     "id": "s3",
@@ -25,7 +26,7 @@ const STATIC_SERVICES = [
     "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Smile Design is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "A comprehensive aesthetic evaluation and treatment plan using advanced imaging to create your perfect Hollywood smile tailored to your facial features."
   },
   {
     "id": "s4",
@@ -33,15 +34,15 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Conservative Dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "A focus on preserving your natural tooth structure using minimally invasive techniques for long-term oral health and integrity."
   },
   {
     "id": "s5",
     "title": "Complete/Partial Dentures Fixing",
-    "category": "General",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Complete/Partial Dentures Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Precise fitting and adjustment of full or partial dentures to restore your ability to eat, speak, and smile with absolute confidence."
   },
   {
     "id": "s6",
@@ -49,7 +50,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Impaction / Impacted Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Safe surgical removal of impacted wisdom teeth or non-erupted teeth using advanced anesthesia and trauma-minimizing surgical protocols."
   },
   {
     "id": "s7",
@@ -57,7 +58,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Dental Fillings is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Durable, tooth-colored composite resin fillings to treat cavities and repair minor cracks while blending seamlessly with your natural teeth."
   },
   {
     "id": "s8",
@@ -65,15 +66,15 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "RCT - Single Sitting is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Faster, pain-free root canal treatment completed in just one visit using modern rotary instruments and digital imaging technology."
   },
   {
     "id": "s9",
     "title": "Zirconia Crowns",
-    "category": "General",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Zirconia Crowns is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Metal-free, biocompatible Zirconia crowns offering extreme strength and lifelike translucency for highly visible smile zones."
   },
   {
     "id": "s10",
@@ -81,7 +82,7 @@ const STATIC_SERVICES = [
     "category": "Implants",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Bone Grafting for Dental Implants is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Advanced procedure to build and strengthen your jawbone, creating a stable foundation for successful and life-long dental implant placement."
   },
   {
     "id": "s11",
@@ -89,7 +90,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "General Dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Routine checkups, cleanings, and proactive screenings to maintain overall oral health and detect potential issues before they become serious."
   },
   {
     "id": "s12",
@@ -97,7 +98,7 @@ const STATIC_SERVICES = [
     "category": "General",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "TMJ Therapy is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Specialized treatment for jaw joint pain and dysfunction using custom splints and therapeutic exercises to relieve chronic discomfort and headaches."
   },
   {
     "id": "s13",
@@ -105,15 +106,15 @@ const STATIC_SERVICES = [
     "category": "General",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Presurgical Orthodontics is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Strategic dental alignment procedures performed prior to jaw surgery to ensure optimal functional and aesthetic outcomes."
   },
   {
     "id": "s14",
     "title": "Ceramic Crowns and Bridges Fixing",
-    "category": "General",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Ceramic Crowns and Bridges Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Beautiful All-Ceramic restorations (E-max) that provide unmatched aesthetic depth and durability for a flawless dental restoration."
   },
   {
     "id": "s15",
@@ -121,7 +122,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Wisdom Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Expert removal of wisdom teeth with emphasis on patient comfort, using gentle surgical methods to promote rapid healing and recovery."
   },
   {
     "id": "s16",
@@ -129,7 +130,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Surgical Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Complex tooth removals performed with surgical precision, ensuring the surrounding bone and tissue are preserved for future treatments."
   },
   {
     "id": "s17",
@@ -137,7 +138,7 @@ const STATIC_SERVICES = [
     "category": "Implants",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Artificial Teeth Implant is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Titanium implants that act as artificial roots, providing a rock-solid foundation for replacement teeth that look, feel, and function like natural ones."
   },
   {
     "id": "s18",
@@ -145,7 +146,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Dental Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Safe and careful removal of damaged or problematic teeth when repair is no longer an option, performed with expert care and anesthesia."
   },
   {
     "id": "s19",
@@ -153,15 +154,15 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "ROOT CANAL is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Standard root canal therapy to save infected teeth by removing nerve pulp and sealing the canals with biocompatible materials."
   },
   {
     "id": "s20",
     "title": "Scaling and Polishing",
-    "category": "Preventive",
+    "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Scaling and Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Deep ultrasonic cleaning to remove plaque and tartar buildup from below the gumline, followed by a professional polish for a fresh feel."
   },
   {
     "id": "s21",
@@ -169,7 +170,7 @@ const STATIC_SERVICES = [
     "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Teeth Cleaning and Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Professional preventive cleaning to keep your gums healthy and your smile bright by removing stains and surface debris."
   },
   {
     "id": "s22",
@@ -177,7 +178,7 @@ const STATIC_SERVICES = [
     "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Tooth Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "A finishing step in dental hygiene where we use gentle micro-abrasives to buff away external stains for a smooth, high-shine finish."
   },
   {
     "id": "s23",
@@ -185,7 +186,7 @@ const STATIC_SERVICES = [
     "category": "Implants",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Dental Implant is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "The ultimate long-term solution for tooth loss, providing a stable, biocompatible foundation that prevents jawbone loss and restores full biting power."
   },
   {
     "id": "s24",
@@ -193,7 +194,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Dental Filling is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "High-quality, long-lasting resin fillings that protect your teeth from further decay while restoring their original shape and function."
   },
   {
     "id": "s25",
@@ -201,7 +202,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "General dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Comprehensive family dental care focusing on prevention, patient education, and early intervention for lasting oral health."
   },
   {
     "id": "s26",
@@ -209,15 +210,15 @@ const STATIC_SERVICES = [
     "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "smile makeover is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "A personalized combination of cosmetic treatments ranging from whitening to veneers to completely transform your smile's aesthetics."
   },
   {
     "id": "s27",
     "title": "Zirconia Crown",
-    "category": "General",
+    "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Zirconia Crown is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "High-strength tooth restorations made from Zirconium oxide, ideal for back teeth that require heavy-duty durability without compromising looks."
   },
   {
     "id": "s28",
@@ -225,7 +226,7 @@ const STATIC_SERVICES = [
     "category": "Cosmetic",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Braces for adults & teens is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Traditional and aesthetic orthodontic options to align your teeth, correct bites, and create a harmonious dental arch for all age groups."
   },
   {
     "id": "s29",
@@ -233,7 +234,7 @@ const STATIC_SERVICES = [
     "category": "Restorative",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Impacted Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Precision surgical extraction of teeth stuck below the gum line to prevent pain, infection, and damage to adjacent healthy teeth."
   },
   {
     "id": "s30",
@@ -241,7 +242,7 @@ const STATIC_SERVICES = [
     "category": "General",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Fixing Dental Gaps is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Correcting gaps between teeth using composite bonding, orthodontic aligners, or veneers for a more uniform and attractive smile profile."
   },
   {
     "id": "s31",
@@ -249,7 +250,58 @@ const STATIC_SERVICES = [
     "category": "General",
     "icon": "🦷",
     "short_desc": "Advanced procedure to optimize your oral health.",
-    "desc": "Tanj Therapy is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+    "desc": "Specialized therapy aimed at oral health optimization and tissue rejuvenation using advanced clinical protocols tailored to your needs."
+  }
+];
+
+const STATIC_GALLERY = [
+  {
+    "title": "Full Smile Makeover",
+    "category": "Smile Makeover",
+    "before": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Composite Bonding Case",
+    "category": "Smile Makeover",
+    "before": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1513222755437-00995fa6657a?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Single Tooth Implant",
+    "category": "Implants",
+    "before": "https://images.unsplash.com/photo-1588776814546-1ffb4b1a546d?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Full Arch Implants",
+    "category": "Implants",
+    "before": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Invisible Braces",
+    "category": "Braces",
+    "before": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Traditional Aligners",
+    "category": "Braces",
+    "before": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1513222755437-00995fa6657a?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "Laser Teeth Whitening",
+    "category": "Whitening",
+    "before": "https://images.unsplash.com/photo-1588776814546-1ffb4b1a546d?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600"
+  },
+  {
+    "title": "In-Office Bleaching",
+    "category": "Whitening",
+    "before": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600",
+    "after": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600"
   }
 ];
 
