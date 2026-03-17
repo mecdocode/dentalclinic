@@ -322,7 +322,7 @@ async function loadServicesPage() {
   function renderList(items) {
     grid.innerHTML = items.map(s => `
       <div class="service-full-card" data-category="${s.category}" data-id="${s.id}"
-           onclick="openDrawer(${JSON.stringify(s).replace(/"/g, '&quot;')})">
+           onclick="openDrawer('${s.id}')">
         <div class="svc-full-icon">${s.icon}</div>
         <h3 class="svc-full-name">${s.title}</h3>
         <p class="svc-full-desc">${s.short_desc}</p>
