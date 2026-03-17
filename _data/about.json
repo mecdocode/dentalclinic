@@ -1,20 +1,4 @@
 {
-  "doctor_name": "Dr. Anmol Billore",
-  "degree": "BDS",
-  "specialization": "Implantologist",
-  "mci": "MCI Verified",
-  "bio_short": "Dr. Anmol Billore is a highly experienced dental surgeon based in Indore with over 16 years of expertise in modern dentistry. Specialising in dental implantology and smile makeovers, he has successfully transformed the smiles of thousands of patients.",
-  "bio_full": "Dr. Anmol Billore completed his BDS from one of India's premier dental institutions and subsequently pursued advanced training in implantology in Germany and South Korea. With a career spanning over 16 years, he has built a reputation for combining technical precision with an artistic understanding of facial aesthetics.\n\nHe is a member of multiple national and international dental associations and regularly participates in conferences and workshops to stay at the forefront of dental innovation.",
-  "quote": "Every smile deserves the best care. My mission is to give you a confident, healthy smile that lasts a lifetime.",
-  "photo": "/images/dr-billore.jpg",
-  "specializations": [
-    { "icon": "🦷", "name": "Dental Implants" },
-    { "icon": "✨", "name": "Smile Makeover" },
-    { "icon": "👑", "name": "Crowns & Veneers" },
-    { "icon": "🔬", "name": "Laser Dentistry" },
-    { "icon": "😁", "name": "Orthodontics" },
-    { "icon": "🧒", "name": "Paediatric Care" }
-  ],
   "timeline": [
     {
       "year": "2008",
@@ -47,10 +31,60 @@
       "desc": "Reached the milestone of 10,000+ completed treatments and maintained a 4.9★ Google rating."
     }
   ],
+  "bio_short": "Dr. Anmol Billore is a highly experienced dental surgeon based in Indore with over 16 years of expertise in modern dentistry. Specialising in dental implantology and smile makeovers, he has successfully transformed the smiles of thousands of patients.",
+  "bio_full": "Dr. Anmol Billore completed his BDS from one of India's premier dental institutions and subsequently pursued advanced training in implantology in Germany and South Korea. With a career spanning over 16 years, he has built a reputation for combining technical precision with an artistic understanding of facial aesthetics.\n\nHe is a member of multiple national and international dental associations and regularly participates in conferences and workshops to stay at the forefront of dental innovation.",
+  "specializations": [
+    {
+      "icon": "🦷",
+      "name": "Dental Implants"
+    },
+    {
+      "icon": "✨",
+      "name": "Smile Makeover"
+    },
+    {
+      "icon": "👑",
+      "name": "Crowns & Veneers"
+    },
+    {
+      "icon": "🔬",
+      "name": "Laser Dentistry"
+    },
+    {
+      "icon": "😁",
+      "name": "Orthodontics"
+    },
+    {
+      "icon": "🧒",
+      "name": "Paediatric Care"
+    }
+  ],
+  "specialization": "Implantologist",
+  "doctor_name": "Dr. Anmol Billore",
+  "degree": "BDS",
+  "photo": "/images/gemini_generated_image_iqo7uxiqo7uxiqo7.png",
+  "mci": "MCI Verified",
+  "quote": "Every smile deserves the best care. My mission is to give you a confident, healthy smile that lasts a lifetime.",
   "stats": [
-    { "num": "16", "suffix": "+", "label": "Years of Experience" },
-    { "num": "500", "suffix": "+", "label": "Implants Placed" },
-    { "num": "10000", "suffix": "+", "label": "Treatments Done" },
-    { "num": "4.9", "suffix": "★", "label": "Google Rating" }
+    {
+      "num": "16",
+      "suffix": "+",
+      "label": "Years of Experience"
+    },
+    {
+      "num": "500",
+      "suffix": "+",
+      "label": "Implants Placed"
+    },
+    {
+      "num": "10000",
+      "suffix": "+",
+      "label": "Treatments Done"
+    },
+    {
+      "num": "4.9",
+      "suffix": "★",
+      "label": "Google Rating"
+    }
   ]
 }
