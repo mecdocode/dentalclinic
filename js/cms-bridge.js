@@ -289,6 +289,32 @@ function setupStatCounters(site) {
 /* ============================================================
    PAGE: SERVICES (services.html)
    ============================================================ */
+
+  // Global drawer trigger populating from STATIC_SERVICES
+  window.openDrawer = function(id) {
+    const s = STATIC_SERVICES.find(item => item.id === id);
+    if (!s) return;
+    
+    const dName = document.getElementById('drawer-name');
+    const dDesc = document.getElementById('drawer-desc');
+    const dCat  = document.getElementById('drawer-cat');
+    const dIcon = document.getElementById('drawer-icon');
+    
+    if (dName) dName.innerText = s.title || s.name;
+    if (dDesc) dDesc.innerText = s.desc || s.short_desc;
+    if (dCat)  dCat.innerText  = s.category;
+    if (dIcon) dIcon.innerText = s.icon || '🩺';
+    
+    document.getElementById('service-drawer')?.classList.add('active');
+    document.getElementById('drawer-overlay')?.classList.add('active');
+  };
+  
+  // Close drawer
+  window.closeDrawer = function() {
+    document.getElementById('service-drawer')?.classList.remove('active');
+    document.getElementById('drawer-overlay')?.classList.remove('active');
+  };
+  
 async function loadServicesPage() {
   const grid = document.getElementById('services-full-grid');
   if (!grid) return;
