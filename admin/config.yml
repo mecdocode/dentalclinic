@@ -93,6 +93,24 @@ collections:
                 hint: "Max 600KB · 1200×800px · JPG landscape"
 
   # ── Reviews ────────────────────────────────────────────────
+  
+  # ── Homepage Slider ──────────────────────────────────────────
+  - name: homepage_slider
+    label: "🖼️ Homepage Slides"
+    files:
+      - file: _data/homepage_slider.json
+        label: Featured Homepage Cases
+        name: homepage_slider
+        fields:
+          - label: Slider Items (Max 3)
+            name: items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Case Label,  name: title,    widget: string }
+              - { label: Category,    name: category, widget: string }
+              - { label: Before Image, name: before,   widget: image }
+              - { label: After Image,  name: after,    widget: image }
   - name: reviews
     label: "⭐ Reviews"
     editor:

@@ -3,63 +3,255 @@
    ROOT CAUSE FIX: LOCAL STATIC DATA (No silent fetch failures)
    ============================================================ */
 const STATIC_SERVICES = [
-  { id: "s1", title: "Dental Implants", category: "Implants", icon: "🦷", short_desc: "Permanent tooth replacement with expert precision.", desc: "Dental implants are the gold standard for replacing missing teeth. Dr. Anmol uses advanced surgical protocols to ensure 100% painless and life-long results.", price: "Premium", duration: "1.5 Hrs" },
-  { id: "s2", title: "Smile Makeover", category: "Cosmetic", icon: "✨", short_desc: "Transform your smile with cosmetic excellence.", desc: "A combination of veneers, whitening, and contouring to give you a Hollywood smile that boosts your confidence and matches your face perfectly.", price: "Premium", duration: "2 Hrs" },
-  { id: "s3", title: "Invisible Aligners", category: "Cosmetic", icon: "💎", short_desc: "Straighten teeth discreetly without metal wires.", desc: "Clear aligners are nearly invisible and removable, making them perfect for adults who want a straighter smile without the hassle of traditional braces.", price: "Advanced", duration: "1 Hr" },
-  { id: "s4", title: "Single-Sitting RCT", category: "Restorative", icon: "⚡", short_desc: "Painless root canal treatment in just one visit.", desc: "Advanced technology allows us to complete most root canal treatments in a single session, saving you time and minimizing discomfort.", price: "Standard", duration: "45 Mins" },
-  { id: "s5", title: "Wisdom Tooth Surgery", category: "Restorative", icon: "🏥", short_desc: "Expert surgical extraction with minimal downtime.", desc: "Safe and precise removal of impacted wisdom teeth using minimally invasive techniques to ensure fast healing.", price: "Standard", duration: "30 Mins" },
-  { id: "s6", title: "Teeth Whitening", category: "Cosmetic", icon: "🌟", short_desc: "Brighten your smile in less than 45 minutes.", desc: "Professional laser teeth whitening that is safe for your enamel and delivers shades of improvement in a single session.", price: "Standard", duration: "45 Mins" },
-  { id: "s7", title: "Crowns & Bridges", category: "Restorative", icon: "🛡️", short_desc: "Durable and natural-looking tooth restorations.", desc: "We use high-quality Zirconia and E-max ceramic materials for dental crowns that are virtually indistinguishable from natural teeth.", price: "Advanced", duration: "45 Mins" },
-  { id: "s8", title: "Pediatric Dentistry", category: "Preventive", icon: "🧸", short_desc: "Gentle dental care for your little ones.", desc: "A kid-friendly environment and specialized care to ensure your child develops healthy dental habits early in life.", price: "Standard", duration: "30 Mins" }
-];
-
-// Extend for 25 items
-for(let i=9; i<=25; i++) {
-  const cats = ["Implants", "Cosmetic", "Restorative", "Preventive"];
-  STATIC_SERVICES.push({
-    id: "s" + i,
-    title: "Specialized Treatment Option " + i,
-    category: cats[i % 4],
-    icon: "🔬",
-    short_desc: "Advanced procedure to optimize your oral health.",
-    desc: "Complete pre-screen assessments and surgical configurations flawlessly provided inside clinic standards.",
-    price: "Standard",
-    duration: "45 Mins"
-  });
-}
-
-const STATIC_GALLERY = [
-  { title: "Smile Makeover", category: "Cosmetic", before: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" },
-  { title: "Dental Implants", category: "Implants", before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80" },
-  { title: "Invisible Aligners", category: "Cosmetic", before: "https://images.unsplash.com/photo-1588776814546-1ffb4b1a546d?auto=format&fit=crop&w=600&q=80", after: "https://images.unsplash.com/photo-1513222755437-00995fa6657a?auto=format&fit=crop&w=600&q=80" }
-];
-
-/* ============================================================
-   Infinity Dental — cms-bridge.js
-   Fetches _data/ JSON/MD files → injects into DOM
-   ============================================================ */
-
-// ── Base path helper ─────────────────────────────────────────
-function basePath() {
-  // Works locally and on Netlify
-  const path = window.location.pathname;
-  const depth = (path.match(/\//g) || []).length - 1;
-  return depth > 0 ? '../'.repeat(depth) : './';
-}
-
-const BASE = basePath();
-
-// ── Fetch helpers ─────────────────────────────────────────────
-async function fetchJSON(path) {
-  try {
-    const res = await fetch(BASE + path);
-    if (!res.ok) throw new Error(`Failed to fetch ${path}`);
-    return await res.json();
-  } catch (e) {
-    console.warn('[cms-bridge]', e.message);
-    return null;
+  {
+    "id": "s1",
+    "title": "Crowns and Bridges Fixing",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Crowns and Bridges Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s2",
+    "title": "Artificial Teeth",
+    "category": "Implants",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Artificial Teeth is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s3",
+    "title": "Smile Design",
+    "category": "Cosmetic",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Smile Design is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s4",
+    "title": "Conservative Dentistry",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Conservative Dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s5",
+    "title": "Complete/Partial Dentures Fixing",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Complete/Partial Dentures Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s6",
+    "title": "Impaction / Impacted Tooth Extraction",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Impaction / Impacted Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s7",
+    "title": "Dental Fillings",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Dental Fillings is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s8",
+    "title": "RCT - Single Sitting",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "RCT - Single Sitting is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s9",
+    "title": "Zirconia Crowns",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Zirconia Crowns is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s10",
+    "title": "Bone Grafting for Dental Implants",
+    "category": "Implants",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Bone Grafting for Dental Implants is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s11",
+    "title": "General Dentistry",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "General Dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s12",
+    "title": "TMJ Therapy",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "TMJ Therapy is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s13",
+    "title": "Presurgical Orthodontics",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Presurgical Orthodontics is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s14",
+    "title": "Ceramic Crowns and Bridges Fixing",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Ceramic Crowns and Bridges Fixing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s15",
+    "title": "Wisdom Tooth Extraction",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Wisdom Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s16",
+    "title": "Surgical Tooth Extraction",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Surgical Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s17",
+    "title": "Artificial Teeth Implant",
+    "category": "Implants",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Artificial Teeth Implant is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s18",
+    "title": "Dental Extraction",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Dental Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s19",
+    "title": "ROOT CANAL",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "ROOT CANAL is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s20",
+    "title": "Scaling and Polishing",
+    "category": "Preventive",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Scaling and Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s21",
+    "title": "Teeth Cleaning and Polishing",
+    "category": "Cosmetic",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Teeth Cleaning and Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s22",
+    "title": "Tooth Polishing",
+    "category": "Cosmetic",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Tooth Polishing is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s23",
+    "title": "Dental Implant",
+    "category": "Implants",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Dental Implant is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s24",
+    "title": "Dental Filling",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Dental Filling is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s25",
+    "title": "General dentistry",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "General dentistry is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s26",
+    "title": "smile makeover",
+    "category": "Cosmetic",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "smile makeover is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s27",
+    "title": "Zirconia Crown",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Zirconia Crown is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s28",
+    "title": "Braces for adults & teens",
+    "category": "Cosmetic",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Braces for adults & teens is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s29",
+    "title": "Impacted Tooth Extraction",
+    "category": "Restorative",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Impacted Tooth Extraction is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s30",
+    "title": "Fixing Dental Gaps",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Fixing Dental Gaps is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
+  },
+  {
+    "id": "s31",
+    "title": "Tanj Therapy",
+    "category": "General",
+    "icon": "🦷",
+    "short_desc": "Advanced procedure to optimize your oral health.",
+    "desc": "Tanj Therapy is provided inside Indore standards using sterilization parameters setup flawlessly config properly."
   }
-}
+];
 
 async function fetchText(path) {
   try {
@@ -127,6 +319,11 @@ async function loadHomePage() {
   setTextById('hero-stat-patients', site.patients);
   setTextById('hero-stat-rating',   site.rating + '★');
 
+  const heroDocImg = document.getElementById('hero-doctor-img');
+  if (heroDocImg && site.doctor_photo) {
+    heroDocImg.src = optimizeImage(site.doctor_photo, 800, 1000);
+  }
+
   // Doctor section
   setTextById('doctor-name',  site.doctor_name);
   setTextById('doctor-title', site.doctor_title);
@@ -175,18 +372,22 @@ async function loadHomePage() {
   }
 
   // Before & After Gallery (Homepage)
-  const galleryItems = STATIC_GALLERY; // Use static mockups
-  if (galleryItems.length) {
-    const baGrid = document.getElementById('home-ba-grid');
-    if (baGrid) {
-      baGrid.innerHTML = galleryItems.slice(0, 2).map((item, i) => `
-        <div class="ba-card anim-fade-up anim-delay-${i + 1}" style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md);">
-          <img-comparison-slider style="width:100%;height:300px;display:block;">
-            <figure slot="first">
-              <img src="${optimizeImage(item.before, 600, 400)}" alt="Before ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
+  let sliderItems = STATIC_GALLERY; // fallback
+  try {
+    const customSlider = await fetchJSON('_data/homepage_slider.json');
+    if (customSlider && customSlider.items) sliderItems = customSlider.items;
+  } catch(e) {}
+
+  const baGrid = document.getElementById('home-ba-grid');
+  if (baGrid && sliderItems.length) {
+    baGrid.innerHTML = sliderItems.slice(0, 3).map((item, i) => `
+        <div class="ba-card anim-fade-up anim-delay-${i + 1}" style="border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md);background:#fff;">
+          <img-comparison-slider style="width:100%;height:300px;display:block;border-bottom:1px solid var(--ice);">
+            <figure slot="first" style="margin:0;">
+              <img src="${item.before}" alt="Before ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
             </figure>
-            <figure slot="second">
-              <img src="${optimizeImage(item.after, 600, 400)}" alt="After ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
+            <figure slot="second" style="margin:0;">
+              <img src="${item.after}" alt="After ${item.title}" style="width:100%;height:300px;object-fit:cover;" loading="lazy">
             </figure>
           </img-comparison-slider>
           <div class="ba-info" style="padding:16px;text-align:center;">
@@ -195,7 +396,6 @@ async function loadHomePage() {
           </div>
         </div>
       `).join('');
-    }
   }
 
   // Testimonials (Homepage)
