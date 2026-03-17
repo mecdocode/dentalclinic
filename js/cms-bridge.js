@@ -305,6 +305,9 @@ const STATIC_GALLERY = [
   }
 ];
 
+// ── Root base URL (works locally and on Netlify) ─────────────
+const BASE = '/';
+
 async function fetchText(path) {
   try {
     const res = await fetch(BASE + path);
@@ -312,6 +315,17 @@ async function fetchText(path) {
     return await res.text();
   } catch (e) {
     console.warn('[cms-bridge]', e.message);
+    return null;
+  }
+}
+
+async function fetchJSON(path) {
+  try {
+    const res = await fetch(BASE + path);
+    if (!res.ok) throw new Error(`Failed to fetch ${path}`);
+    return await res.json();
+  } catch (e) {
+    console.warn('[cms-bridge] fetchJSON failed for', path, e.message);
     return null;
   }
 }
